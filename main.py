@@ -34,12 +34,11 @@ speechEngine.setProperty('rate', 150)
 speechEngine.setProperty('voice', voices[1].id)
 
 # progit start at 14
-page = pdfFilReader.getPage(15)
+page = pdfFilReader.getPage(14)
 text = page.extractText()
 
-print(text)
-
-speechEngine.say(text)
+#speechEngine.say(text)
+speechEngine.say(text.replace('\n', ' '))
 speechEngine.runAndWait()
 
 print("Stopping Text2Speech Script!!!")
